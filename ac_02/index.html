@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Envio de SMS RoupApp</title>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portifolio</title>
+      <!--CSS-->
+      <link rel= "stylesheet" href="./css/reset.css">
+      <link rel="stylesheet" href="./css/header.css">
+      <link rel="stylesheet" href="./css/footer.css">
+      <link rel="stylesheet" href="./css/main.css">
+      <!--Fontes-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+      <!--Icons-->
+      <script src="https://kit.fontawesome.com/0b4a1f5c4b.js" crossorigin="anonymous" defer></script>
+  </head>
+</head>
+<header>
+  <h1>RoupApp</h1>
+
+  <nav>
+    <div class="card">
+      <img src="./img/RoupAppLOGO.png" alt="Logo do APP">
+    </div>
+  </nav>
+
+</header>
+<main>
+<body>
+    <form id="enviar-sms-form">
+        <label for="numero_destino">Número do Destinatário:</label><br>
+        <input type="text" id="numero_destino" name="numero_destino"><br>
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem"></textarea><br>
+        <button type="button" onclick="enviarSMS()">Enviar SMS</button>
+    </form>
+
+    <div id="mensagem-resultado"></div>
+
+    <script>
+      function enviarSMS() {
+        var numero_destino = document.getElementById('numero_destino').value;
+        var mensagem = document.getElementById('mensagem').value;
+    
+        var payload = {
+            "from": "fernando8",
+            "to": numero_destino,
+            "contents": [
+                {
+                    "type": "text",
+                    "text": mensagem
+                }
+            ]
+        };
+    
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://api.zenvia.com/v2/channels/sms/messages', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('X-API-Token', 'uSuNpPxccSTMuX4f2ZtnYI3RXzgO67EGjBoC');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    alert('Mensagem enviada com sucesso!');
+                } else {
+                    alert('Erro ao enviar mensagem.');
+                }
+            }
+        };
+        xhr.send(JSON.stringify(payload));
+    }
+    
+    </script>
+</body>
+</main>
+<footer>
+  <div>
+    <h3>Espero que tenha gostado!</h3>
+  <div>
+</footer>
+</html>

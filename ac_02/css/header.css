@@ -1,0 +1,65 @@
+header {
+    background-color: #222;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 800;
+    cursor:pointer;
+}
+
+header nav div img{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    color: #00e0ff;
+    transition: 0.2s ease-in-out;
+    
+}
+
+header h1, nav, div, img{
+    color: #00e0ff;
+    transition: 0.2s ease-in-out;
+}
+
+header h1:hover, img:hover{
+    color: #fff;
+}
+
+/*-----------caards---------*/
+
+header img {
+    display: flex;
+    align-items: center;
+}
+
+header img{
+
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: box-shadow 0.25s ease-in-out;
+
+}
+
+header img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+header img:hover{
+    box-shadow: 0px 0px 8px #00e0ff;
+}
