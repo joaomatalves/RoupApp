@@ -6,16 +6,26 @@
 }
 
 body{
+    
     width: 100%;
     height: 100vh;
 
-    background-color: #59595a;
-    color: #fff;
+    background-color: #F2F2F2;
+    color: #F2F2F2;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+
+form {
+    background-color: #181111;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
 
 a{
     text-decoration: none;

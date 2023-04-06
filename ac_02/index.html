@@ -32,11 +32,11 @@
 <main>
 <body>
     <form id="enviar-sms-form">
-        <label for="numero_destino">Número do Destinatário:</label><br>
-        <input type="text" id="numero_destino" name="numero_destino"><br>
-        <label for="mensagem">Mensagem:</label><br>
-        <textarea id="mensagem" name="mensagem"></textarea><br>
-        <button type="button" onclick="enviarSMS()">Enviar SMS</button>
+        <label for="numero_destino">Número de celular para confirmação do pedido via SMS:</label><br>
+        <input type="text" id="numero_destino" name="numero_destino" placeholder="Ex: (55) 11 12345-6789 "><br>
+        
+       
+        <button type="button" onclick="enviarSMS()">Confirmar pedido</button>
     </form>
 
     <div id="mensagem-resultado"></div>
@@ -44,7 +44,8 @@
     <script>
       function enviarSMS() {
         var numero_destino = document.getElementById('numero_destino').value;
-        var mensagem = document.getElementById('mensagem').value;
+       
+        mensagem = "RoupApp: Parabéns! Sua compra foi concluída com sucesso."
     
         var payload = {
             "from": "fernando8",
