@@ -21,7 +21,7 @@ function enviarSMS() {
   xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
-              alert('Mensagem enviada com sucesso!');
+              alert('Seu pedido foi confirmado com sucesso!');
           } else {
               alert('Erro ao enviar mensagem.');
           }
