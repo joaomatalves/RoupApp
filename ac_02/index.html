@@ -5,6 +5,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="javascript/enviarSMS.js"></script>
       <title>Portifolio</title>
       <!--CSS-->
       <link rel= "stylesheet" href="./css/reset.css">
@@ -32,7 +33,7 @@
 <main>
 <body>
     <form id="enviar-sms-form">
-        <label for="numero_destino">Número de celular para confirmação do pedido via SMS:</label><br>
+        <label for="numero_destino">Número de celular para confirmação do pedido:</label><br>
         <input type="text" id="numero_destino" name="numero_destino" placeholder="Ex: (55) 11 12345-6789 "><br>
         
        
@@ -41,40 +42,7 @@
 
     <div id="mensagem-resultado"></div>
 
-    <script>
-      function enviarSMS() {
-        var numero_destino = document.getElementById('numero_destino').value;
-       
-        mensagem = "RoupApp: Parabéns! Sua compra foi concluída com sucesso."
-    
-        var payload = {
-            "from": "fernando8",
-            "to": numero_destino,
-            "contents": [
-                {
-                    "type": "text",
-                    "text": mensagem
-                }
-            ]
-        };
-    
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://api.zenvia.com/v2/channels/sms/messages', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader('X-API-Token', 'uSuNpPxccSTMuX4f2ZtnYI3RXzgO67EGjBoC');
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    alert('Mensagem enviada com sucesso!');
-                } else {
-                    alert('Erro ao enviar mensagem.');
-                }
-            }
-        };
-        xhr.send(JSON.stringify(payload));
-    }
-    
-    </script>
+   
 </body>
 </main>
 <footer>
