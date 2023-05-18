@@ -1,0 +1,69 @@
+header {
+    background-color: #0a0101;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 800;
+    cursor:pointer;
+}
+
+header nav div img{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    color: #00e0ff;
+    transition: 0.2s ease-in-out;
+    
+}
+
+
+header h1, nav, div, img {
+    background-image: linear-gradient(to bottom, #3f0352, #3243da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.2s ease-in-out;
+  }
+
+header h1:hover, img:hover{
+    color: #fff;
+}
+
+/*-----------caards---------*/
+
+header img {
+    display: flex;
+    align-items: center;
+}
+
+header img{
+
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: box-shadow 0.25s ease-in-out;
+
+}
+
+header img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+header img:hover{
+    box-shadow: 0px 0px 8px #00e0ff;
+}

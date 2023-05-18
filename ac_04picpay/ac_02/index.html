@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio de SMS RoupApp</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/0b4a1f5c4b.js" crossorigin="anonymous" defer></script>
+
+  <!-- JavaScript -->
+  <script src="javascript/enviarSMS.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <style>
+    /* Coloque aqui seu estilo personalizado */
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/ac_02/catalogo.html">RoupApp</a></h1>
+  
+    <nav>
+      <div class="card">
+        <a href="/ac_02/catalogo.html"><img src="./img/RoupAppLOGO.png" alt="Logo do APP"></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <form method="post" action="validacao.php" id="enviar-sms-form">
+      <label for="numero_destino">Número de celular para confirmação do pedido via SMS:</label><br>
+      <input type="text" id="numero_destino" name="numero_destino" placeholder="Ex: (55) 11 12345-6789 "><br>
+        
+      <button type="button" onclick="enviarSMS()">Confirmar pedido</button>
+
+      <div class="g-recaptcha" data-sitekey="6LcNt8IlAAAAADcGBUdtrQrOiT0UTvbJ0-raFdGo" name="g-recaptcha-response"></div>
+      
+      <input type="submit" name="enviar" onclick="return valida()">
+    </form>
+
+    <script type="text/javascript">
+      function valida() {
+        if (grecaptcha.getResponse() == "") {
+          alert("Você precisa marcar a validação.");
+          return false;
+        }
+      }
+    </script>
+
+    <div id="mensagem-resultado"></div>
+  </main>
+
+  <footer>
+    <div>
+      <h3>Espero que tenha gostado!</h3>
+    <div>
+  </footer>
+</body>
+</html>

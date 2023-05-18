@@ -1,0 +1,76 @@
+/* Definir a fonte padrão */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Personalizar o cabeçalho */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  /* Personalizar a navegação */
+  nav {
+    background-color: #eee;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Personalizar o conteúdo principal */
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  img {
+    width: 150pt;
+  }
+  
+  /* Personalizar o rodapé */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  

@@ -1,0 +1,23 @@
+footer{
+    background-color: #0a0101;
+    height: 80px;
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        height: auto;
+    }
+}
